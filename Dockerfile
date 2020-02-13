@@ -1,4 +1,5 @@
 FROM alpine
+RUN apk add --no-cache tzdata
 ADD https://caddyserver.com/download/linux/arm7?plugins=http.filter,http.ipfilter,http.realip,tls.dns.cloudflare&license=personal&telemetry=off /tmp/caddy.tar
 RUN tar -xf /tmp/caddy.tar
 RUN cp caddy /usr/bin/caddy

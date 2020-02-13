@@ -6,5 +6,6 @@ RUN chmod +x /usr/bin/caddy
 
 EXPOSE 80/tcp 443/tcp
 VOLUME [ "/config", "/www" ]
-COPY root/ /
-#RUN /usr/bin/caddy -agree -conf /config/Caddyfile -log stdout -root /tmp
+#COPY root/ /
+COPY Caddyfile /config/
+CMD /usr/bin/caddy -agree -conf /config/Caddyfile -log stdout -root /tmp

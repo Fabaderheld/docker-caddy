@@ -7,4 +7,4 @@ EXPOSE 80/tcp 443/tcp
 VOLUME [ "/config", "/www" ]
 #COPY root/ /
 COPY Caddyfile /config/
-CMD /usr/bin/caddy -agree -conf /config/Caddyfile -log stdout -root /tmp
+CMD /usr/bin/caddy run -config /config/Caddyfile

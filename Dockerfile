@@ -1,6 +1,6 @@
 FROM alpine
 RUN apk add --no-cache tzdata
-ADD https://caddyserver.com/api/download?os=linux&arch=arm&arm=7&idempotency=93119246464169 /usr/bin/caddy
+ADD https://caddyserver.com/api/download?os=linux&arch=arm&arm=7&p=github.com%2Fcaddy-dns%2Fhetzner&idempotency=20397297580339 /usr/bin/caddy
 RUN chmod +x /usr/bin/caddy
 
 EXPOSE 80/tcp 443/tcp
